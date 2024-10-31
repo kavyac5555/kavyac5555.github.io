@@ -1,21 +1,30 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Kavya's Portfolio</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
         body {
             background-color: #26493c;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
 
         .container {
             position: relative;
             width: 798px;
-            height: 738px;
-            margin: auto;
-            z-index: 1;
+            background-color: #baebcc;
+            border-radius: 45px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         #brain {
@@ -23,29 +32,22 @@
             width: 300px;
             object-fit: cover;
             border-radius: 50%;
-        }
-
-        .content {
-            background-color: #baebcc;
-            margin-top: -189px;
-            border-radius: 45px 45px 0px 0px;
-            padding: 20px;
+            margin-bottom: 20px; /* Adds space between the image and buttons */
         }
 
         nav {
-            width: 75%;
-            height: 100px;
-            background-color: #baebcc;
-            color: #000000;
-            margin: 200px auto 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px; /* Adds space between buttons and content */
         }
 
-        nav>a button {
+        nav > a button {
             background-color: #476656;
             width: 183px;
             height: 87px;
             border-radius: 25px;
-            text-align: center;
             border: none;
             color: #FFFFFF;
             font-family: "Playfair Display", serif;
@@ -56,18 +58,21 @@
             text-decoration: none;
         }
 
-        nav>a:hover button {
+        nav > a:hover button {
             background-color: #8cad93;
             color: #000000;
             font-weight: 800;
             letter-spacing: 4px;
         }
 
-        .center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
+        .content {
+            width: 100%;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-family: "Playfair Display", serif;
         }
 
         #about::first-letter {
@@ -78,18 +83,18 @@
         }
     </style>
 </head>
-
 <body>
     <div class="container">
-        <img src="brain.jpg" id="brain" alt="A picture of the brain" class="center">
-        <div class="content">
-            <nav>
-                <a href="#about"><button>About</button></a>
-                <a href="#why"><button>Why</button></a>
-                <a href="#contact"><button>Contact</button></a>
-            </nav>
+        <img src="brain.jpg" id="brain" alt="A picture of the brain">
+        
+        <nav>
+            <a href="#about"><button>About</button></a>
+            <a href="#why"><button>Why</button></a>
+            <a href="#contact"><button>Contact</button></a>
+        </nav>
 
-            <h2 id="Kavya" style="text-align: center;">Kavya's Portfolio</h2>
+        <div class="content">
+            <h2 id="Kavya">Kavya's Portfolio</h2>
 
             <section id="about">
                 <p>About me</p>
@@ -98,5 +103,4 @@
         </div>
     </div>
 </body>
-
 </html>
