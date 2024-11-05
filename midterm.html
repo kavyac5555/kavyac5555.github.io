@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kavya Chandrasekar Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Lora', serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f5f0;
+            color: #4a3f35;
+        }
+
+        /* Header */
+        header {
+            background: #dbc5a9;
+            color: #4a3f35;
+            padding: 20px;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            margin: 0;
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            color: #4a3f35;
+            text-decoration: none;
+            padding: 8px 12px;
+            margin: 0 10px;
+            border-radius: 15px;
+            background: #e8ded0;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #c9b8a3;
+            transform: scale(1.05);
+        }
+
+        /* Flex Container for About Me and Goals */
+        .flex-container {
+            display: flex; /* Use Flexbox for layout */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            justify-content: space-between; /* Space between the sections */
+            margin: 20px auto; /* Center the container */
+        }
+
+        .about-me, .goals, #useful-links, #image-section, #contact {
+            flex: 1 1 45%; /* Allow both sections to grow equally, base size at 45% */
+            margin: 10px; /* Space around each section */
+            padding: 20px; /* Padding inside each section */
+            background-color: #ffffff; /* White background for sections */
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        /* Text and Links */
+        .about-me p, .goals p, #contact p, #useful-links p {
+            font-size: 1.1em;
+            margin: 15px 0;
+            color: #4a3f35;
+        }
+
+        a {
+            color: #7b4b3a;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #a26650;
+        }
+
+        /* Image Styling */
+        figure {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+            border: 3px solid #dbc5a9;
+        }
+
+        /* Contact Form */
+        #contact form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #contact input, #contact textarea {
+            margin-bottom: 10px;
+            padding: 12px;
+            border: 1px solid #c9b8a3;
+            border-radius: 10px;
+            font-size: 1em;
+            background-color: #fff9f4;
+            color: #4a3f35;
+        }
+
+        #contact button {
+            padding: 12px;
+            background: #dbc5a9;
+            color: #4a3f35;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        #contact button:hover {
+            background: #c9b8a3;
+            transform: scale(1.05);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        section {
+            animation: fadeIn 1s ease;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .about-me, .goals, #useful-links, #image-section, #contact {
+                flex: 1 1 100%; /* Stack sections on smaller screens */
+                margin: 10px 0; /* Remove side margins */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Kavya Chandrasekar Portfolio</h1>
+        <nav>
+            <a href="#about-me">About Me</a>
+            <a href="#goals">Goals</a>
+            <a href="#useful-links">Useful Links</a>
+            <a href="#image-section">The Brain</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="flex-container">
+        <section class="about-me" id="about-me">
+            <h2>About Me</h2>
+            <p>Hello! I'm Kavya, a Computer Science major with a minor in Applied Biosciences at ASU, holding a Certificate in Symbolic, Linguistic, and Cognitive Systems. My skills include Java, C, HTML, MATLAB, Bash, and more.</p>
+            <p>As a Biocomputing Research Scholar, I contributed to the PREP project, enhancing automated software repair. My projects include a dynamic Valentine's website, a graph pathfinding algorithm, a bridge simulation circuit, and a maze-navigating car.</p>
+            <p>I'm also active in ASU’s Grand Challenges Scholars Program, Theta Tau fraternity, Combat Robotics, and NeuroDevils, pursuing hands-on experiences in technology, robotics, and neuroscience.</p>
+        </section> 
+    
+        <section class="goals" id="goals">
+            <h2>My Goals</h2>
+            <p>My primary goal is to pursue a career in biocomputing or computational neuroscience. I am deeply interested in how technology can enhance our understanding of biological systems and improve healthcare solutions. I aim to leverage my skills in computer science to create innovative tools and applications that can assist in diagnosing and treating diseases, ultimately contributing to advancements in personalized medicine.</p>
+            <p>In the short term, I plan to engage in internships and research opportunities that will allow me to apply my technical skills in real-world scenarios.</p>
+            <p>Long-term, I aspire to pursue a graduate degree in computational neuroscience, where I can further my knowledge and research in neural networks and artificial intelligence.</p>
+        </section>
+    </section>
+
+    <section id="useful-links">
+        <h2>Useful Links</h2>
+        <p>Check out <a href="https://github.com/kavyac5555" target="_blank">this website</a> for my Github!</p>
+        <p>Check out <a href="https://www.linkedin.com/in/kavya-chandrasekar-587665207/" target="_blank">this website</a> for my Linkedin.</p>
+    </section>
+
+    <section id="image-section">
+        <h2>The Brain</h2>
+        <figure>
+            <img src="https://cdn-prod.medicalnewstoday.com/content/images/articles/324/324998/vintage-illustration-of-a-brain.jpg" alt="Brain illustration">
+        </figure>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+</body>
+</html>
