@@ -52,21 +52,37 @@
 
         /* Flex Container for About Me and Goals */
         .flex-container {
-            display: flex; /* Use Flexbox for layout */
-            flex-wrap: wrap; /* Allow wrapping on smaller screens */
-            justify-content: space-between; /* Space between the sections */
-            margin: 20px auto; /* Center the container */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px auto;
         }
 
         .about-me, .goals, #useful-links, #image-section, #contact {
-            flex: 1 1 45%; /* Allow both sections to grow equally, base size at 45% */
-            margin: 10px; /* Space around each section */
-            padding: 20px; /* Padding inside each section */
-            background-color: #ffffff; /* White background for sections */
-            border-radius: 15px; /* Rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            flex: 1 1 45%;
+            margin: 10px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
+        /* Add Background Image on Right Side */
+        #useful-links {
+            background-image: url('floral-border.png'); /* Update with your image path */
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        /* Contact Section Background Image */
+        #contact {
+            background-image: url('floral-bottom.png'); /* Update with your image path */
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
         /* Text and Links */
         .about-me p, .goals p, #contact p, #useful-links p {
             font-size: 1.1em;
@@ -144,8 +160,8 @@
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .about-me, .goals, #useful-links, #image-section, #contact {
-                flex: 1 1 100%; /* Stack sections on smaller screens */
-                margin: 10px 0; /* Remove side margins */
+                flex: 1 1 100%;
+                margin: 10px 0;
             }
         }
     </style>
