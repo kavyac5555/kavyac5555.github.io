@@ -1,0 +1,107 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+.page {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Green Ombre Background */
+body {
+    background: linear-gradient(to bottom, #00b894, #2dff65);
+    color: white;
+    transition: background 0.3s ease-in-out;
+}
+
+#quiz-page, #landing-page, #result-page {
+    display: block;
+}
+
+/* Buttons */
+button {
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Quiz Styling */
+#quiz-container {
+    margin-top: 20px;
+}
+
+.quiz-question {
+    margin-bottom: 20px;
+}
+
+.quiz-option {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #27ae60;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.2s;
+}
+
+.quiz-option:hover {
+    background-color: #1e7d4b;
+}
+
+/* Result Page Styling */
+#result-page {
+    background: linear-gradient(to bottom, #ff6f61, #d9534f);
+    color: white;
+    padding-top: 50px;
+}
+
+#result-page .result {
+    font-size: 22px;
+    margin: 20px 0;
+}
+
+#result-page a {
+    font-size: 18px;
+    color: #f0ad4e;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #f0ad4e;
+    border-radius: 5px;
+}
+
+#result-page a:hover {
+    background-color: #ec971f;
+}
+
+/* Individual Personality Page Styles */
+.adventurer {
+    background: linear-gradient(to bottom, #3498db, #2980b9);
+}
+
+.rockstar {
+    background: linear-gradient(to bottom, #2c3e50, #34495e);
+}
+
+.dreamer {
+    background: linear-gradient(to bottom, #9b59b6, #8e44ad);
+}
+
+.chillVibes {
+    background: linear-gradient(to bottom, #1abc9c, #16a085);
+}
