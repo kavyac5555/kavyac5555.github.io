@@ -3,97 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz: Pick Your Mood</title>
+    <title>Personality Quiz</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div id="quiz-page">
-        <h2>Pick Your Mood</h2>
-        <form id="quiz-form">
-            <div id="question-1">
-                <h3>1. If you had to pick a way to get around, what would it be?</h3>
-                <button type="button" class="answer" data-answer="Adventurer">Spaceship</button>
-                <button type="button" class="answer" data-answer="Rockstar">Motorcycle</button>
-                <button type="button" class="answer" data-answer="Dreamer">Hot Air Balloon</button>
-                <button type="button" class="answer" data-answer="Chill Vibes">Bicycle</button>
-            </div>
-
-            <div id="question-2">
-                <h3>2. What’s your ideal vacation destination?</h3>
-                <button type="button" class="answer" data-answer="Adventurer">Mountain Expedition</button>
-                <button type="button" class="answer" data-answer="Rockstar">Concert in Vegas</button>
-                <button type="button" class="answer" data-answer="Dreamer">Paris, for inspiration</button>
-                <button type="button" class="answer" data-answer="Chill Vibes">Beach Resort</button>
-            </div>
-
-            <div id="question-3">
-                <h3>3. Pick an animal that you relate to:</h3>
-                <button type="button" class="answer" data-answer="Adventurer">Tiger</button>
-                <button type="button" class="answer" data-answer="Rockstar">Eagle</button>
-                <button type="button" class="answer" data-answer="Dreamer">Fox</button>
-                <button type="button" class="answer" data-answer="Chill Vibes">Sloth</button>
-            </div>
-
-            <div id="question-4">
-                <h3>4. If you could control the weather, what would it be like right now?</h3>
-                <button type="button" class="answer" data-answer="Adventurer">Lightning Storm</button>
-                <button type="button" class="answer" data-answer="Rockstar">Clear Skies and Sunshine</button>
-                <button type="button" class="answer" data-answer="Dreamer">Misty Fog</button>
-                <button type="button" class="answer" data-answer="Chill Vibes">Calm and Breezy</button>
-            </div>
-
-            <div id="question-5">
-                <h3>5. What’s your favorite type of music?</h3>
-                <button type="button" class="answer" data-answer="Adventurer">Rock</button>
-                <button type="button" class="answer" data-answer="Rockstar">Pop</button>
-                <button type="button" class="answer" data-answer="Dreamer">Indie</button>
-                <button type="button" class="answer" data-answer="Chill Vibes">Ambient</button>
-            </div>
-
-            <div id="question-6">
-                <h3>6. How do you spend your free time?</h3>
-                <button type="button" class="answer" data-answer="Adventurer">Traveling</button>
-                <button type="button" class="answer" data-answer="Rockstar">Partying</button>
-                <button type="button" class="answer" data-answer="Dreamer">Reading</button>
-                <button type="button" class="answer" data-answer="Chill Vibes">Relaxing at Home</button>
-            </div>
-
-            <div id="question-7">
-                <h3>7. If you were to write a book, what would it be about?</h3>
-                <button type="button" class="answer" data-answer="Adventurer">Survival in the Wilderness</button>
-                <button type="button" class="answer" data-answer="Rockstar">The Life of a Music Icon</button>
-                <button type="button" class="answer" data-answer="Dreamer">A Journey Through a Fantasy World</button>
-                <button type="button" class="answer" data-answer="Chill Vibes">Finding Peace in a Busy World</button>
-            </div>
-
-            <div id="question-8">
-                <h3>8. What’s your dream job?</h3>
-                <button type="button" class="answer" data-answer="Adventurer">Explorer</button>
-                <button type="button" class="answer" data-answer="Rockstar">Musician</button>
-                <button type="button" class="answer" data-answer="Dreamer">Artist</button>
-                <button type="button" class="answer" data-answer="Chill Vibes">Yoga Instructor</button>
-            </div>
-
-            <div id="question-9">
-                <h3>9. What’s your favorite season?</h3>
-                <button type="button" class="answer" data-answer="Adventurer">Winter</button>
-                <button type="button" class="answer" data-answer="Rockstar">Summer</button>
-                <button type="button" class="answer" data-answer="Dreamer">Autumn</button>
-                <button type="button" class="answer" data-answer="Chill Vibes">Spring</button>
-            </div>
-
-            <div id="question-10">
-                <h3>10. What’s your idea of fun?</h3>
-                <button type="button" class="answer" data-answer="Adventurer">Adrenaline Rush</button>
-                <button type="button" class="answer" data-answer="Rockstar">Concerts and Festivals</button>
-                <button type="button" class="answer" data-answer="Dreamer">Creating Art</button>
-                <button type="button" class="answer" data-answer="Chill Vibes">Relaxing with Friends</button>
-            </div>
-
-            <button type="button" id="submit-quiz">Submit</button>
-        </form>
+<body id="quizPage">
+    <div id="quizContainer">
+        <h1>Personality Quiz</h1>
+        <div id="questionContainer"></div>
+        <div id="answersContainer"></div>
     </div>
 
-    <script src="scripts.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "If you had to pick a way to get around, what would it be?",
+                answers: [
+                    { text: "Spaceship", personality: 'A' },
+                    { text: "Zoo animal", personality: 'D' },
+                    { text: "Helicopter", personality: 'E' },
+                    { text: "Jetpack", personality: 'L' }
+                ]
+            },
+            {
+                question: "What kind of music do you enjoy?",
+                answers: [
+                    { text: "Rock", personality: 'A' },
+                    { text: "Indie", personality: 'E' },
+                    { text: "Classical", personality: 'D' },
+                    { text: "Pop", personality: 'L' }
+                ]
+            },
+            {
+                question: "If your soul were a color, what would it be?",
+                answers: [
+                    { text: "Emerald Green", personality: 'A' },
+                    { text: "Lavender", personality: 'D' },
+                    { text: "Midnight Blue", personality: 'E' },
+                    { text: "Gold", personality: 'L' }
+                ]
+            },
+            {
+                question: "If you could live in any fictional world, where would it be?",
+                answers: [
+                    { text: "Middle-Earth", personality: 'A' },
+                    { text: "Neverland", personality: 'D' },
+                    { text: "A galaxy far, far away", personality: 'E' },
+                    { text: "A city that never sleeps", personality: 'L' }
+                ]
+            },
+            {
+                question: "What would you do if you found a hidden door in your house?",
+                answers: [
+                    { text: "Open it without hesitation", personality: 'A' },
+                    { text: "Sit and wonder what’s inside for hours", personality: 'D' },
+                    { text: "Call a friend to explore it with me", personality: 'E' },
+                    { text: "Study the door before opening it", personality: 'L' }
+                ]
+            },
+            {
+                question: "What do you think the moon smells like?",
+                answers: [
+                    { text: "Freshly baked cookies", personality: 'A' },
+                    { text: "A distant dream", personality: 'D' },
+                    { text: "Adventure and discovery", personality: 'E' },
+                    { text: "Victory and strength", personality: 'L' }
+                ]
+            },
+            {
+                question: "If you could talk to animals, what would be your first question?",
+                answers: [
+                    { text: "How do you see the world?", personality: 'A' },
+                    { text: "What dreams do you have?", personality: 'D' },
+                    { text: "Where do you go when no one's watching?", personality: 'E' },
+                    { text: "How do you lead your pack?", personality: 'L' }
+                ]
+            },
+            {
+                question: "If you could turn into any mythical creature, what would it be?",
+                answers: [
+                    { text: "Dragon", personality: 'A' },
+                    { text: "Unicorn", personality: 'D' },
+                    { text: "Phoenix", personality: 'E' },
+                    { text: "Griffin", personality: 'L' }
+                ]
+            },
+            {
+                question: "If you were a type of weather, what would you be?",
+                answers: [
+                    { text: "Thunderstorm", personality: 'A' },
+                    { text: "Gentle breeze", personality: 'D' },
+                    { text: "Morning mist", personality: 'E' },
+                    { text: "Blazing sun", personality: 'L' }
+                ]
+            },
+            {
+                question: "Which word best describes the vibe of your dream home?",
+                answers: [
+                    { text: "Wanderlust", personality: 'A' },
+                    { text: "Ethereal", personality: 'D' },
+                    { text: "Endless adventure", personality: 'E' },
+                    { text: "Commanding", personality: 'L' }
+                ]
+            },
+            {
+                question: "If your personality were an element, what would it be?",
+                answers: [
+                    { text: "Fire", personality: 'A' },
+                    { text: "Air", personality: 'D' },
+                    { text: "Water", personality: 'E' },
+                    { text: "Earth", personality: 'L' }
+                ]
+            }
+        ];
+
+        let answersCount = { A: 0, D: 0, E: 0, L: 0 };
+        let currentQuestion = 0;
+
+        function showQuestion() {
+            if (currentQuestion < questions.length) {
+                const question = questions[currentQuestion];
+                document.getElementById('questionContainer').innerHTML = `<h2>${question.question}</h2>`;
+                let answersHTML = '';
+                question.answers.forEach(answer => {
+                    answersHTML += `<button onclick="handleAnswer('${answer.personality}')">${answer.text}</button>`;
+                });
+                document.getElementById('answersContainer').innerHTML = answersHTML;
+            } else {
+                const mostSelectedPersonality = getMostSelectedPersonality();
+                window.location.href = `results.html?personality=${mostSelectedPersonality}`;
+            }
+        }
+
+        function handleAnswer(personality) {
+            answersCount[personality]++;
+            currentQuestion++;
+            showQuestion();
+        }
+
+        function getMostSelectedPersonality() {
+            const maxCount = Math.max(...Object.values(answersCount));
+            for (let personality in answersCount) {
+                if (answersCount[personality] === maxCount) {
+                    return personality;
+                }
+            }
+        }
+
+        showQuestion();
+    </script>
 </body>
 </html>

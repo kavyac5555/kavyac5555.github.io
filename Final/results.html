@@ -3,16 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Personality Result</title>
+    <title>Results</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div id="result-page">
-        <h2>Your Personality</h2>
-        <p id="result-description"></p>
-        <a id="result-spotify" href="" target="_blank">Listen to your playlist!</a>
+<body id="resultContainer" class="result-background">
+    <div id="resultContainer">
+        <h1 id="personalityName"></h1>
+        <p id="description"></p>
+        <iframe id="spotifyPlaylist" class="spotify-embed"></iframe>
     </div>
 
-    <script src="results.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const personality = urlParams.get('personality');
+
+        const personalityData = {
+            A: {
+                name: "Adventurer",
+                description: "You are an adventurer, always seeking new experiences and challenges.",
+                playlist: "https://open.spotify.com/embed/playlist/0TpWHCkwqRHth8IUEbEezM",
+                class: "adventurer"
+            },
+            D: {
+                name: "Dreamer",
+                description: "You are a dreamer, always envisioning new possibilities and thinking outside the box.",
+                playlist: "https://open.spotify.com/embed/playlist/37i9dQZF1DX6uhsAfngvaD?utm_source=generator",
+                class: "dreamer"
+            },
+            E: {
+                name: "Main Character",
+                description: "You're an main character, driven by pure vibes and the desire to discover who you are.",
+                playlist: "https://open.spotify.com/embed/playlist/02zbKZaUjPLubfMkGb0Iyv?utm_source=generator",
+                class: "explorer"
+            },
+            L: {
+                name: "Cult Leader",
+                description: "You are a natural cult leader, taking charge and guiding others to what you want.",
+                playlist: "https://open.spotify.com/embed/playlist/53mCyNmhXmZSm8ON7zkX8h?utm_source=generator",
+                class: "leader"
+            }
+        };
+
+        if (!personalityData[personality]) {
+            window.location.href = "quiz.html";
+        } else {
+            const data = personalityData[personality];
+            document.getElementById('personalityName').textContent = data.name;
+            document.getElementById('description').textContent = data.description;
+            document.getElementById('spotifyPlaylist').src = data.playlist;
+            document.body.classList.add(data.class);
+        }
+    </script>
 </body>
 </html>
