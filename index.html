@@ -3,40 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kavya Chandrasekar Portfolio</title>
-    <style>
-        body {
-            font-family: 'Times New Roman', Times, serif, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        .about-me {
-            margin-bottom: 20px;
-        }
-        #goals {
-            margin-bottom: 20px;
-        }
-    </style>
+    <title>Welcome</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-
-    <h1> Kavya Chandrasekar Portfolio</h1>
-
-    <section class="about-me">
-        <h2>About Me</h2>
-        <p>Hello! I'm Kavya, and I'm passionate about technology and its intersection with biology. I enjoy exploring new ideas in computer science and how they can be applied to real-world problems.</p>
-    </section>
-
-    <section id="goals">
-        <h2>My Goals</h2>
-        <p>My main goal is to pursue a career in biocomputing or computational neuroscience. I aim to leverage technology to innovate solutions in healthcare and improve people's lives.</p>
-    </section>
-
-    <h2>Useful Links</h2>
-    <p>Check out <a href="https://www.polytechnique-insights.com/en/columns/science/biocomputing-the-promise-of-biological-computingbrains/" target="_blank"> this website </a> for more information on what Biocomputing is.</p>
-
-    <h2>My Picture</h2>
-    <img src="https://cdn-prod.medicalnewstoday.com/content/images/articles/324/324998/vintage-illustration-of-a-brain.jpg" alt="brain" />
-
+<body class="animated-gradient">
+    <div class="welcome-page">
+        <h1>Welcome to the Quiz</h1>
+        <p>Test your personality and discover something new about yourself!</p>
+        <button id="start-quiz" onclick="startQuiz()">Start Quiz</button>
+    </div>
+    <script>
+        function startQuiz() {
+            window.location.href = "quiz.html";
+        }
+    </script>
 </body>
 </html>
