@@ -82,7 +82,7 @@
             margin: 20px auto;
         }
 
-        .about-me, .goals, #useful-links, #image-section, #contact {
+        .about-me, .goals, #useful-links, #image-section {
             flex: 1 1 45%;
             margin: 10px;
             padding: 20px;
@@ -105,6 +105,24 @@
             background-position: bottom;
             background-repeat: no-repeat;
             background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ensures it takes at least the full viewport height */
+            text-align: center;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        iframe {
+            border: none;
+            max-width: 100%; /* Ensures the form doesn't overflow its container */
+            height: 800px; 
         }
         
         /* Text and Links */
@@ -234,20 +252,13 @@
     </section>
 
     <section id="contact">
-        <h2>Contact Me</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeiXTGskHAYuLCRzJdxUqUEhE9QcsbQLFX-wNM3IY0xnMBBrg/viewform?embedded=true" 
+        width="640" height="849" frameborder="0" marginheight="0" marginwidth="0">
+        Loading…
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
-
-            <button type="submit">Send Message</button>
-        </form>
+        </iframe>
     </section>
+    
 
 </body>
 </html>
